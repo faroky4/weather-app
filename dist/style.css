@@ -1,0 +1,29 @@
+body {
+    background-color: lightblue;
+  }
+  .data-div {
+    width: 90%;
+    background-color: rgb(81, 148, 170);
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px;
+    padding: 10px;
+    position: absolute;
+  }
+  .city-div {
+    display: grid;
+    /* height: 100px; */
+    background-color: rgb(67, 67, 179);
+    text-align: center;
+    align-content: center;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  
+  .photoHolder {
+    background-color: #f8f8ff;
+  }
+  
