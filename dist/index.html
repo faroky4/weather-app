@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="input-div">
+        <input type="text" id="cityName-input" placeholder="What's you'r city name?"><br>
+        <button id="btn"> Get City Weather</button>
+    </div>
+    <div class="data-div" >
+             
+    </div>
+    <script id="cities-template" type="text/x-handlebars-template">
+         
+        {{#each citiesData}}
+          <div class="city-div" >
+           
+                <h2 class="nameOf-city"> {{ name }} </h2>
+                <img class="icon-city" src="{{ conditionIcon }}" alt="No Relevant Photo Found" >
+                <h3 class="temperature-city">{{ temperature }}</h3>
+                <h3 class="condition-city">{{ condition }}</h3>
+                <button id="save-btn" style="display: block;"> Save</button>
+                <button id="del-btn" style="display: none;"> Remove</button>
+
+          </div>
+            
+          {{/each}}
+      
+      </script>
+    
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="cityModel.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
