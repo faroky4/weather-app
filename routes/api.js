@@ -55,6 +55,7 @@ router.post('/city' , function(request,response){
 
 router.delete('/city/:cityName' , function(request,response){
     let cityName = request.params.cityName;
+    console.log(cityName);
     City.findOneAndDelete({ name: cityName }, function (err, city) {
         console.log(city);
     });

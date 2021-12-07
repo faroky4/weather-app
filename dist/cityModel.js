@@ -26,13 +26,17 @@ class CityModel {
 
     async removeCity(cityName) {
         await $.ajax({
-          url: `city/?cityName=${cityName}`,
+          url: `city/${cityName}`,
           method: "DELETE",
           success: function (response) {
             console.log("delete complete");
           },
         });
         // remove city from cities array
+    }
+
+    removeFromCities(cityName){
+        
     }
 
 }
