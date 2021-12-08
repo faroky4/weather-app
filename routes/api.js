@@ -7,7 +7,8 @@ const City = require('../model/City')
 const API_KEY = 'fe3c83574bb6f19d60cf0b424088d5e1'
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/weatherDB', { useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URL||'mongodb://localhost/weatherDB');
+//mongoose.connect('mongodb://localhost/weatherDB', { useNewUrlParser: true })
 
 router.get( '/city/:cityName' , function(request,response) {
     let city = request.params.cityName
